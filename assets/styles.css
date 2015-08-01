@@ -1,0 +1,72 @@
+/* general styles */
+body
+{
+    margin-top: 50px;
+}
+
+/* navigation bar */
+.hypatia-navbar 
+{
+    background: #333;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.hypatia-navbar .navbar-brand img
+{
+    height: 20px;
+    width: auto;
+}
+
+.hypatia-navbar a
+{
+    color: #fff;
+}
+
+.hypatia-navbar a:not(.navbar-brand):hover
+{
+    color: #333;
+    background: #fff;
+}
+
+/* jumbotron styles */
+.jumbotron {
+    background: #333;
+    color: #fff;
+}
+
+.jumbotron a
+{
+    /* slight color variation on links in the jumbotron to make them easier to
+       read on the dark background */
+
+    color: #40ACFF;
+}
+
+.jumbotron a:hover
+{
+    color: #338ACC;
+}
+
+/* page-specific styles */
+.hypatia-demo-panel
+{
+    text-align: center;
+}
+
+.hypatia-demo-panel img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.hypatia-blog-excerpt-panel h4
+{
+    margin-top: 0;
+}
+
+.hypatia-post-preview
+{
+    border-bottom: 1px solid #ccc;
+}

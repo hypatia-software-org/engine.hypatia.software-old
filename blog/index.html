@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="col-xs-12">
+        {% for post in paginator.posts %}
+            <div class="hypatia-post-preview">
+                <h1>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        {{ post.title }}
+                        {% if post.author %}
+                            <small>by {{ post.author }}</small>
+                        {% endif %}
+                    </a>
+                </h1>
+
+                {{ post.excerpt }}
+
+                <p><a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
+            </div>
+        {% endfor %}
+
+        <ul class="pager clearfix">
+            {% if paginator.previous_page %}
+                <li class="previous">
+                    <a aria-hidden="true" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">
+                        &laquo; Previous page
+                    </a>
+                </li>
+            {% endif %}
+            {% if paginator.next_page %}
+                <li class="next">
+                    <a aria-hidden="true" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
+                        Next page &raquo;
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
