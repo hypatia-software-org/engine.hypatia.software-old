@@ -1,5 +1,5 @@
 hypatia_repo: https://github.com/lillian-lemmer/hypatia
-# baseurl: /hypatia
+baseurl: /hypatia
 
 defaults:
     -
