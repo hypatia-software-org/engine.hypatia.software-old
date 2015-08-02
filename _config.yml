@@ -1,5 +1,5 @@
 hypatia_repo: https://github.com/lillian-lemmer/hypatia
-baseurl: /hypatia
+# baseurl: /hypatia
 
 defaults:
     -
@@ -8,7 +8,20 @@ defaults:
             type: "posts"
         values:
             layout: "post"
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            layout: "page"
 
 permalink: /blog/:year/:month/:day/:title.html
 paginate: 5
 paginate_path: /blog/page/:num
+
+markdown: kramdown
+kramdown:
+    input: GFM
+sass:
+    sass_dir: _sass
+    style: :compressed
