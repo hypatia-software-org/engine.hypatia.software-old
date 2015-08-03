@@ -98,7 +98,7 @@ In our above example, tile 21 will be turned into an animation which cycles it's
 
 ### [flags]
 
-This section denotes flags that are set on specific tiles. In our example, tiles 0, 1, and 2 have the `impass_all` flag set - which means that the player, and NPCs, can not pass through these tiles. Generally, you'd set `impass_all` for walls, fauna, and other structures.
+This section denotes flags that are set on specific tiles. In our example, tiles 0, 1, and 2 have the `impass_all` flag set - which means that the player, and NPCs, can not pass through these tiles. Generally, you would set `impass_all` for walls, fauna, and other structures.
 
 ## Tilemaps
 
