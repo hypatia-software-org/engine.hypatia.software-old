@@ -1,0 +1,25 @@
+---
+layout: default
+title: Gallery
+---
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>Gallery</h1>
+    </div>
+
+    {% for i in site.data.gallery %}
+        {% capture loopindex %}{{ forloop.index | modulo:3 }}{% endcapture %}
+        {% if loopindex == 0 %}<div class="row">{% endif %}
+
+        <div class="col-xs-12 col-md-4">
+            <div class="thumbnail">
+                <img src="{{ i.image }}" alt="{{ i.title }}">
+                <h3>{{ i.title }}</h3>
+            </div>
+        </div>
+
+        {% if loopindex == 2 %}</div>{% endif %}
+    {% endfor %}
+</div>
