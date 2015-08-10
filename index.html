@@ -9,8 +9,7 @@ layout: default
             Hypatia is aimed at non-programmers and programmers alike.
         </p>
         <p>
-            Sound interesting? Find out <a href="{{ site.baseurl }}/contribute.html">how to contribute</a>,
-            or <a href="{{ site.baseurl }}/divein.html">get started with Hypatia, without any programming knowledge</a>.
+            Sound interesting? Find out how to <a href="{{ site.baseurl }}/divein.html">get started with Hypatia, without any programming knowledge</a>, or <a href="{{ site.baseurl }}/contribute.html">contribute to Hypatia</a>.
         </p>
     </div>
 </div>
@@ -34,17 +33,6 @@ layout: default
     <div class="col-xs-12 col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Latest on the Hypatia blog</h3>
-            </div>
-            <div class="panel-body hypatia-blog-excerpt-panel">
-                {% assign post = site.posts.first %}
-                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-                <p>{{ post.excerpt }}</p>
-                <p><a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
                 <h3 class="panel-title">Help Hypatia's development</h3>
             </div>
             <div class="panel-body">
@@ -53,6 +41,20 @@ layout: default
                 You can help continue it's development by contributing to 
                 <a href="https://www.patreon.com/lilylemmer">Lily's Patreon</a>.
             </p>
+            <p>
+                Want to help develop Hypatia? Just head over to our <a href="{{ site.hypatia_repo }}">GitHub repository</a> to get the code and start on your journey of contributing to an awesome open source project!
+            </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Latest on the Hypatia blog</h3>
+            </div>
+            <div class="panel-body hypatia-blog-excerpt-panel">
+                {% assign post = site.posts.first %}
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+                <p>{{ post.excerpt }}</p>
+                <p><a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
             </div>
         </div>
     </div>
