@@ -1,3 +1,5 @@
+@import 'colors'
+
 .donate-type
     box-sizing: border-box
     width: 100%
@@ -7,6 +9,15 @@
     img
         width: 150px
         height: auto
+
+    a
+        color: $accent500
+
+        &:hover
+            color: $accent900
+	
+    @media screen and (max-width: 767px)
+        margin: 0
 
 .donate-pad
     img

@@ -1,3 +1,5 @@
+@import 'colors'
+
 .hypatia-navbar
     background: #333
     color: #fff
@@ -14,5 +16,9 @@
         color: #fff
 
         &:not(.navbar-brand):hover
-            color: #333
-            background: #fff
+            color: $accent50
+            background: $accent500
+
+        &.navbar-donate
+            background: $iaccent500
+            color: $iaccent50
