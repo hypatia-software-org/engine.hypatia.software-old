@@ -17,6 +17,9 @@ title: Gallery
             <div class="thumbnail">
                 <img src="{{ i.image }}" alt="{{ i.title }}">
                 <h3>{{ i.title }}</h3>
+                {% if i.desc %}
+                    <p>{{ i.desc }}</p>
+                {% endif %}
             </div>
         </div>
 
