@@ -1,10 +1,6 @@
 ---
-title: Dive in!
+title: Create a game with Hypatia
 ---
-
-Want to get started with Hypatia? Great! This page contains a wealth of information on how Hypatia works.
-
-The included demo allows you to mess with all of it's code and resources, and as such is a great way to learn the basics of using Hypatia.
 
 ## Contents
 {:.no_toc}
@@ -12,27 +8,39 @@ The included demo allows you to mess with all of it's code and resources, and as
 * Table of Contents
 {:toc}
 
-## Get started with the demo
+## Welcome
 
-* **Windows**:
-  Download the [latest demo release]({{ site.hypatia_repo }}/releases/latest), extract it, and run `game.exe`.
+Hello! This tutorial aims to guide you through the basics of creating a game with Hypatia.
 
-* **Linux, Mac OS X, and other platforms:**
-  1. Clone the [Hypatia Git repository]({{ site.hypatia_repo }}).
-  2. From a terminal window, change directories into the cloned repository.
-  3. Install Hypatia by running `pip install .`.
-  4. Change directories into the `demo` directory.
-  5. Run `python game.py`.
+We're assuming you already have Hypatia installed, if not, go over to the [Get Hypatia]({{ site.baseurl }}/get.html) page and follow the instructions for your operating system.
 
-If you're still here, great! Read on to find out how a Hypatia game is created.
+## Set up the directory layout
 
-## Tilesheets
+The base directory layout for a Hypatia game looks like this:
 
-A tilesheet is an image that contains multiple graphical tiles for use in the game, much like a proof sheet in photography.
+- `game.py`
+- `resources/`
+  - `tilesheets/`
+  - `scenes/`
+  - `walkabouts/`
 
-Hypatia stores tilesheets in `resources/tilesheets/`, relative to the game script file. The tilesheets are stored in ZIP archives, which contain two files: `tilesheet.png`, which is the tilesheet itself, and `tilesheet.ini`, which contains data about the tilesheet for Hypatia to use.
+The `resources/tilesheets/` directory contains tilesheets, which are images that contain multiple graphical tiles for the game - much like a proof sheet in photography.
 
-Here's an example `tilesheet.ini`:
+The `resources/scenes/` directory contains scenes. Scenes contain a tilemap, which states what tiles to draw; NPC information; and information about the scene itself.
+
+The `resources/walkabouts/` directory contains walkabout sprites - the sprites for the player, NPCs, and other game resources.
+
+## Creating a tilesheet
+
+A tilesheet is an image that contains graphical tiles that are used to draw the game.
+
+A tilesheet looks like this:
+
+![]({{ site.baseurl }}/assets/tilesheet.png)
+
+This tilesheet is made up of 16x16 pixel tiles, but the number of pixels for each tile can vary from tilesheet to tilesheet, as long as they are consistent within the same tilesheet.
+
+Each tilesheet has the tilesheet itself, `tilesheet.png`, and an associated INI file, `tilesheet.ini`. The `tilesheet.ini` file contains the following:
 
 ```
 [meta]
@@ -58,7 +66,7 @@ tile_height=16
 2=impass_all
 ```
 
-This file is split up into 4 sections: `[meta]`, `[animations]`, `[animate_effect]`, and `[flags]`.
+Let's break this down. This file is split up into 4 sections: `[meta]`, `[animations]`, `[animate_effect]`, and `[flags]`.
 
 ### [meta]
 
@@ -108,16 +116,16 @@ A tilemap looks like this:
 
 ```
 example
--1 -1 -1 00 00 00 00 -1 -1 -1
--1 00 00 00 00 00 00 -1 -1 -1
--1 00 00 00 00 00 00 00 00 -1
--1 -1 -1 00 00 00 00 00 00 00
--1 -1 00 00 01 01 01 01 01 -1
--1 -1 -1 00 01 00 00 00 01 -1
--1 -1 -1 00 00 00 00 00 01 -1
--1 -1 -1 00 01 00 00 00 01 -1
--1 -1 00 00 01 01 01 01 01 -1
--1 00 00 00 00 00 00 00 00 -1
+-1 -1 -1 11 11 11 11 -1 -1 -1
+-1 11 11 11 11 11 11 -1 -1 -1
+-1 11 11 11 11 11 11 11 11 -1
+-1 -1 -1 11 11 11 11 11 11 11
+-1 -1 11 11 01 01 01 01 01 -1
+-1 -1 -1 11 01 11 11 11 01 -1
+-1 -1 -1 11 00 11 11 11 01 -1
+-1 -1 -1 11 01 11 11 11 01 -1
+-1 -1 11 11 01 01 01 01 01 -1
+-1 11 11 11 11 11 11 11 11 -1
 ```
 
 Let's break this down. The first line of the tilemap is the name of the tilesheet to use when drawing this map. In this example, the name of the tilesheet is `example`.
@@ -164,6 +172,8 @@ This creates an NPC named "jill" using the walkabout sprite "jill", who will say
 
 A character sprite consists of many actions. They can be standing still, walking, running, and facing in many different directions. Walkabout sprites let you create a sprite that will react properly to all these different states.
 
+Walkabout sprites are found in the `resources/walkabouts/` directory.
+
 For example, a character walking in 4 directions (up, down, left, right) will need 4 GIFs (animated or not):
 
 * `walk_north.gif`
@@ -175,19 +185,22 @@ For the character standing still, you'll need an additional 4 GIFs - `stand_nort
 
 If you don't want to create that many GIFs, and don't care about additional animations, you can use one file named `only.gif`.
 
+The `walk_south.gif` from the Hypatia demo looks like this:
+
+![]({{ site.baseurl }}/assets/walkabout.gif)
+
 ### Anchor points
 
 Any GIF file used in the sprite requires a corresponding INI file - so `walk_north.gif` will have a corresponding `walk_north.ini`. This file contains the anchor points for the image.
 
-Anchor points are (x, y) coordinates of where to pin objects to. In our example, our `walk_north.ini` may look like this:
+Anchor points are (x, y) coordinates of where to pin objects to. In our example, our `walk_south.ini` looks like this:
 
 ```
 [head_anchor]
-0=0,2
-1=1,3
-2=2,2
+0=2,1
+1=2,0
+2=2,1
 ```
 
-`[head_anchor]` means that we are defining the anchor for the sprite's head. `0=0,2` means that the anchor point for the head in the zeroth frame is at pixel location (0, 2), and so on.
+`[head_anchor]` means that we are defining the anchor for the sprite's head. `0=2,1` means that the anchor point for the head in the zeroth frame is at pixel location (2, 1), and so on.
 
-You should look at the walkabout sprites included with the Hypatia demo to see what they look like in action.
