@@ -1,22 +1,15 @@
 ---
-title: Contributing to the website
+title: Contributing to Hypatia
 ---
 
-This page is a work in progress.
+Want to get started contributing to Hypatia? Here's a few ways to help out, and chat to the other developers of the project!
 
-## Image gallery
+## Tackle a "help wanted" issue
 
-To add an image to the image gallery, place the image in the `assets/` folder, and then edit the `_data/gallery.yml` file, adding the following data:
+The Hypatia GitHub repository has a collection of issues that are marked as "help wanted". These issues are a good place to start jumping in to development of the engine.
 
-```
--
-  image: /assets/your_image.png
-  title: Image Title
-  desc: Image Description (optional)
-```
+The current "help wanted" issues are listed [over here](https://github.com/hypatia-engine/hypatia/labels/help%20wanted).
 
-## Wiki pages
+## Chat with the developers on Slack
 
-The wiki is stored in the `wiki/` subfolder. Wiki pages are individual Markdown files in this folder.
-
-The wiki's sidebar is stored in the `_includes/wiki_sidebar.html` file, and editing this lets you add pages to the sidebar.
+The Hypatia developers all talk on Slack, a team communication platform. If you would like to join us and contribute ideas, or just chat with the team, you can join by sending Lillian an email, at [lillian.lynn.lemmer@gmail.com](mailto:lillian.lynn.lemmer@gmail.com).
