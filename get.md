@@ -25,6 +25,5 @@ sudo pkg_add hypatia
 ## FreeBSD
 
 ```
-cd /usr/ports/games/hypatia_engine
-make install
+sudo pkg install hypatia_engine
 ```
