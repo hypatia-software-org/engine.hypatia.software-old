@@ -15,8 +15,14 @@ title: Gallery
 
         <div class="col-xs-12 col-md-4">
             <div class="thumbnail">
+                {% if i.link %}
+                    <a href="{{ i.link }}">
+                {% endif %}
                 <img src="{{ i.image }}" alt="{{ i.title }}">
-                <h3>{{ i.title }}</h3>
+                {% if i.link %}
+                    </a>
+                {% endif %}
+                <p><h3>{{ i.title }}</h3></p>
                 {% if i.desc %}
                     <p>{{ i.desc }}</p>
                 {% endif %}
