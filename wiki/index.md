@@ -1,3 +1,7 @@
+---
+title: Hypatia wiki
+---
+
 ![Hypatia](https://github.com/hypatia-engine/hypatia/blob/master/media/logos/logotype-blacktext-transparentbg.png)
 
 This is the home page of the Hypatia wiki.
