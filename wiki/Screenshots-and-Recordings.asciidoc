@@ -1,0 +1,9 @@
+If you're looking for media checkout:
+
+  * the official website: https://lillian-lemmer.github.io/hypatia
+  * link:http://hypatiagameengine.tumblr.com/[the official hypatia tumblr]
+  * link:http://lillianlemmer.imgur.com/[Lillian's Imgur]
+  * link:http://imgur.com/a/Geumh[Timeline on Imgur]
+
+To see how to make high-quality, low-file-size animated GIFs, webms, see: link:Making-Screen-Recording-Media[].
+
