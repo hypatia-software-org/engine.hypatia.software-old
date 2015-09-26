@@ -8,7 +8,7 @@ This is the home page of the Hypatia wiki.
 
 ## About Hypatia
 
-* [[Hypatia on the web/social media/contact info|Profiles]]
+* [Hypatia on the web/social media/contact info](social.html)
 
 ## Help Hypatia's development
 
