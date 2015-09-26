@@ -2,7 +2,7 @@
 
 The purpose of this document is to enumerate all accounts and profiles associated with Hypatia, especially in regard to social media or contact.
 
-This excludes methods of supporting Hypatia financially, which can be found on the [[Support-the-Project|Support-the-Project]] page.
+This excludes methods of supporting Hypatia financially, which can be found on the [Donate]({{site.baseurl}}/donate.html) page.
 
 ## Development and Testing
 * [Travis CI](https://travis-ci.org/lillian-lemmer/hypatia): Continuous integration testing

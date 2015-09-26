@@ -1,5 +1,3 @@
-![0.2.6 in development](http://lillian-lemmer.github.io/hypatia/media/recordings/2015-06-28-develop-640x480.gif)
-
 At some point you'll probably want a good way to distribute recordings of gameplay.
 
 I like to use `ffmpeg`, `convert`, and `gtk-recordmydesktop` in FreeBSD.
