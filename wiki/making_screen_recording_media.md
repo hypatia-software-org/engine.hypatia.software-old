@@ -2,6 +2,15 @@ At some point you'll probably want a good way to distribute recordings of gamepl
 
 I like to use `ffmpeg`, `convert`, and `gtk-recordmydesktop` in FreeBSD.
 
+### Quick
+
+```
+$ ffmpeg -i in.ogv -pix_fmt rgb24 -r 10 -s 320x240 output.gif
+$ convert output.gif -fuzz 10% -layers Optimize optimised.gif
+```
+
+### Trimming
+
 Trimming video from `[start seconds]` until `[duration seconds]` thereafter:
 
 ```
