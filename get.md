@@ -6,7 +6,7 @@ Here's how to get Hypatia!
 
 ## Windows
 
-Download the Hypatia for Windows distribution from the [releases page]({{ site.hypatia_repo }}/releases/latest).
+Windows binaries will be available soon from the [releases page]({{ site.hypatia_repo }}/releases/latest).
 
 ## Linux
 
@@ -22,8 +22,8 @@ pip install hypatia_engine
 sudo pkg_add hypatia
 ```
 
-## FreeBSD
+## FreeBSD and DragonFly BSD
 
 ```
-sudo pkg install hypatia_engine
+sudo pkg install py27-hypatia_engine
 ```
