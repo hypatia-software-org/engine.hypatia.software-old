@@ -8,7 +8,7 @@ This page is a work in progress.
 
 To add an image to the image gallery, place the image in the `assets/` folder, and then edit the `_data/gallery.yml` file, adding the following data:
 
-```
+```yaml
 -
   image: /assets/your_image.png
   title: Image Title

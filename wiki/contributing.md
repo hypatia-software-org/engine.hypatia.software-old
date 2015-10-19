@@ -62,7 +62,7 @@ The following statements must have a blank line above and below:
 
 Examples of what _must have a blank line above and below_:
 
-```
+```python
 if x == 2:
 
     continue
@@ -89,7 +89,7 @@ The following must have a blank line above:
 
 Example of what _must have a blank line above_:
 
-```
+```python
 try:
     d = {}
     d['lol no such key']
@@ -148,7 +148,7 @@ Our doctests are verified by Travis CI. You can avoid embarassment by running th
   * Avoid creating classes in your tests.
   * The following try/except block is needed:
 
-    ```
+    ```python
         try:
             os.chdir('demo')
         except OSError:
