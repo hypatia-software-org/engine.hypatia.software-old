@@ -1,3 +1,7 @@
+---
+title: Development Tools
+---
+
 Here are the tools I (Lillian) use while developing Hypatia:
 
   * VIM

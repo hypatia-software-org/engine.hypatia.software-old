@@ -1,3 +1,7 @@
+---
+title: Social profiles for Hypatia
+---
+
 ## Purpose
 
 The purpose of this document is to enumerate all accounts and profiles associated with Hypatia, especially in regard to social media or contact.

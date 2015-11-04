@@ -1,3 +1,7 @@
+---
+title: Recording your screen
+---
+
 At some point you'll probably want a good way to distribute recordings of gameplay.
 
 I like to use `ffmpeg`, `convert`, and `gtk-recordmydesktop` (did you know ctrl + alt + s stops recording?) in FreeBSD.
