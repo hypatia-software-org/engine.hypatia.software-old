@@ -23,9 +23,30 @@ The Hypatia developers all talk on Slack, a team communication platform. If you 
 
 ## Guidelines for contributing
 
-### Git Flow
+### Git
 
 The general git flow of the project follows [A Successful git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/). Please branch from the `develop` branch.
+
+#### Getting Reviews for Patches and Branches
+
+Developers must **never** add commits to `develop` or merge a branch into it (or `master`) without first receiving a review from one of the core contributors who have permission to change those branches.  Those developers are:
+
+1. Lily Lemmer
+2. Alice Jenkinson
+3. Eric James Michael Ritz
+
+The actual reviews can take place on GitHub by leaving comments on specific lines for commits, and/or for each commit as a whole.  After one of the three developers aboves reviews a branch and gives the "thumbs up" the developer of the commit or branch **must** include that information.  For example, if the proposed change is a single commit then the develop should rewrite the commit message to add this line to the message:
+
+    Reviewed-by: Eric James Michael Ritz <ejmr@plutono.com>
+
+The format is the same as `Signed-off-by:` metadata, and developers can use that or `Tested-by:` in place of `Reviewed-by:`---whatever feels most appropriate.
+
+If the proposed change is a branch with multiple commits then the author of the branch **must** include such a `Reviewed-by:` line to the merge commit.  Use the `--edit` flag with `git merge` for this, e.g.
+
+    $ git checkout develop
+    $ git merge --no-ff --edit your-branch-name
+
+This will open the merge commit message in an editor so that one can add the appropriate sign-off or reviewed/tested-by metadata.
 
 #### Writing Git Commit Messages
 
