@@ -1,13 +1,7 @@
 hypatia_repo: https://github.com/hypatia-engine/hypatia
 
 defaults:
-    -
-        scope:
-            path: ""
-            type: "posts"
-        values:
-            layout: "post"
-    -
+   -
         scope:
             path: ""
             type: "pages"
@@ -19,11 +13,6 @@ defaults:
             type: "pages"
         values:
             layout: "wiki"
-
-
-permalink: /blog/:year/:month/:day/:title.html
-paginate: 5
-paginate_path: /blog/page/:num
 
 markdown: kramdown
 kramdown:
