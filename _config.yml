@@ -1,7 +1,7 @@
-hypatia_repo: https://github.com/hypatia-engine/hypatia
+hypatia_repo: https://github.com/hypatia-software-organization/hypatia-engine
 
 defaults:
-   -
+    -
         scope:
             path: ""
             type: "pages"
